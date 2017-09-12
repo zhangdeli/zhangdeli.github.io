@@ -172,7 +172,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -235,6 +235,99 @@
             
               
                 
+                <a class="post-title-link" href="/2017/09/12/Install-Python/" itemprop="url">
+                  Unbenannt
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2017-09-12T14:50:16+08:00" content="2017-09-12">
+              2017-09-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CentOS7下编译安装Python3-6-0"><a href="#CentOS7下编译安装Python3-6-0" class="headerlink" title="CentOS7下编译安装Python3.6.0"></a>CentOS7下编译安装Python3.6.0</h1><h3 id="具体安装过程"><a href="#具体安装过程" class="headerlink" title="具体安装过程"></a>具体安装过程</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">一：安装epel源和依赖包</div><div class="line"><span class="comment"># wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span></div><div class="line"><span class="comment"># rpm -ivh epel-release-latest-7.noarch.rpm</span></div><div class="line"><span class="comment"># yum repolist</span></div><div class="line"><span class="comment"># yum install zlib-devel bzip2-devel gdbm-devel openssl-devel gcc gcc-c++ groupinstall development zlib-devel expat-devel readline-devel sqlite-devel -y</span></div><div class="line"></div><div class="line">二：编译安装</div><div class="line"><span class="comment"># cd /usr/local/src</span></div><div class="line"><span class="comment"># wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz</span></div><div class="line"><span class="comment"># tar Jxvf Python-3.6.0.tar.xz</span></div><div class="line"><span class="comment"># cd Python-3.6.0</span></div><div class="line"><span class="comment"># ./configure --prefix=/usr/local/python3.6.0</span></div><div class="line"><span class="comment"># make &amp;&amp; make install</span></div><div class="line"></div><div class="line">三：添加软链接</div><div class="line"><span class="comment"># cd ~</span></div><div class="line"><span class="comment"># ln -s /usr/local/python3.6.0/bin/python3.6 /usr/bin/python</span></div><div class="line"><span class="comment"># ln -s /usr/local/python3.6.0/bin/pip3 /usr/bin/pip</span></div><div class="line"></div><div class="line">四：增加环境变量</div><div class="line"><span class="comment"># vim /etc/profile</span></div><div class="line"><span class="built_in">export</span> PYTHON_HOME=/usr/<span class="built_in">local</span>/python3.6.0</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PYTHON_HOME</span>/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/02/Learn-Markdown/" itemprop="url">
                   Learn Markdown
                 </a>
@@ -248,7 +341,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-08-02T09:25:26+08:00" content="2016-08-02">
               2016-08-02
             </time>
@@ -346,7 +439,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-08-01T14:32:50+08:00" content="2016-08-01">
               2016-08-01
             </time>
@@ -455,8 +548,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -503,7 +596,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
