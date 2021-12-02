@@ -1,17 +1,11 @@
 # Welcome to MkDocs
 
-For full documentation visit [myblog](https://zhangdeli.github.io).
+For full documentation visit [myblog](https://zhangdeli.github.io/site).
 
-## Commands
+## DevOps
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+* `什么是DevOps` - DevOps是一套实践方法，在保证高质量的前提下缩短系统变更从提交到部署至生产环境的时间。
 
-## Project layout
+## SRE
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+    https://sre.google/
