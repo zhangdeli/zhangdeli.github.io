@@ -1,2 +1,2 @@
-# 个人网站
+# 个人博客
 ## https://zhangdeli.github.io/site
