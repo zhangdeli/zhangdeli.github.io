@@ -1,6 +1,6 @@
 # Welcome to MkDocs
 
-For full documentation visit [myblog](https://zhangdeli.github.io/site).
+For full documentation visit [mysite](https://zhangdeli.github.io/site).
 
 ## DevOps
 
@@ -8,4 +8,4 @@ For full documentation visit [myblog](https://zhangdeli.github.io/site).
 
 ## SRE
 
-    https://sre.google/
+    https://sre.google
