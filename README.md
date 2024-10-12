@@ -8,4 +8,5 @@ https://k8s-tutorials.pages.dev/
 https://norouzi.github.io/
 https://fangqingkai.github.io/
 https://www.nkn-it.de/
+https://darioamodei.com/
 ```
