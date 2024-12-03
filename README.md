@@ -12,4 +12,5 @@ https://fangqingkai.github.io/
 https://shawnshenjx.github.io/
 https://www.nkn-it.de/
 https://darioamodei.com/
+https://logank.ai/
 ```
