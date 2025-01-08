@@ -10,6 +10,7 @@ https://k8s-tutorials.pages.dev/
 https://norouzi.github.io/
 https://fangqingkai.github.io/
 https://shawnshenjx.github.io/
+https://evelinehong.github.io/
 https://www.nkn-it.de/
 https://darioamodei.com/
 https://logank.ai/
