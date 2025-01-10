@@ -11,6 +11,7 @@ https://norouzi.github.io/
 https://fangqingkai.github.io/
 https://shawnshenjx.github.io/
 https://evelinehong.github.io/
+https://lijiaman.github.io/
 https://www.nkn-it.de/
 https://darioamodei.com/
 https://logank.ai/
