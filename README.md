@@ -12,6 +12,7 @@ https://fangqingkai.github.io/
 https://shawnshenjx.github.io/
 https://evelinehong.github.io/
 https://lijiaman.github.io/
+https://luhengshiwo.github.io/LLMForEverybody/
 https://www.nkn-it.de/
 https://darioamodei.com/
 https://logank.ai/
