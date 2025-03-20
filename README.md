@@ -18,6 +18,7 @@ https://www.nkn-it.de/
 https://darioamodei.com/
 https://logank.ai/
 https://patloeber.com/
+https://awesome-devops.xyz/
 
 【Sphinx】
 https://mydumper.github.io/mydumper/docs/html/index.html
