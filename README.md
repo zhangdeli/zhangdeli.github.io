@@ -19,6 +19,7 @@ https://darioamodei.com/
 https://logank.ai/
 https://patloeber.com/
 https://awesome-devops.xyz/
+https://ysqander.site/links/
 
 【Sphinx】
 https://mydumper.github.io/mydumper/docs/html/index.html
