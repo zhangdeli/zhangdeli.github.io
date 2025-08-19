@@ -26,7 +26,7 @@ https://manateelazycat.github.io/tags.html
 【Sphinx】
 https://mydumper.github.io/mydumper/docs/html/index.html
 https://microsoft.github.io/promptflow/
-
+https://google.github.io/adk-docs/
 
 【OpenHands】
 https://repost-code-gen.github.io/
