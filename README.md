@@ -20,6 +20,8 @@ https://logank.ai/
 https://patloeber.com/
 https://awesome-devops.xyz/
 https://ysqander.site/links/
+https://manateelazycat.github.io/
+https://manateelazycat.github.io/tags.html
 
 【Sphinx】
 https://mydumper.github.io/mydumper/docs/html/index.html
