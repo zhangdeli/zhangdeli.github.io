@@ -14,6 +14,8 @@ https://evelinehong.github.io/
 https://lijiaman.github.io/
 https://luhengshiwo.github.io/LLMForEverybody/
 https://zjunlp.github.io/project/OmniThink/
+https://iamtaolong.github.io/
+
 https://www.nkn-it.de/
 https://darioamodei.com/
 https://logank.ai/
