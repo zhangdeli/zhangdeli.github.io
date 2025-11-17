@@ -19,7 +19,7 @@ https://iamtaolong.github.io/
 https://www.nkn-it.de/
 https://darioamodei.com/
 https://logank.ai/
-https://patloeber.com/
+https://patloeber.com/  （good）
 https://awesome-devops.xyz/
 https://ysqander.site/links/
 https://manateelazycat.github.io/
