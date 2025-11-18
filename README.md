@@ -33,6 +33,10 @@ https://microsoft.github.io/promptflow/
 https://google.github.io/adk-docs/
 https://blog.oikolab.com/
 
+【mintlify】
+https://www.mintlify.com/
+https://docs.runpod.io/overview
+
 【OpenHands】
 https://repost-code-gen.github.io/
 
