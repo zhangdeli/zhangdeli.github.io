@@ -42,4 +42,6 @@ https://repost-code-gen.github.io/
 
 
 https://etcwhat.com/
+
+其他参考 https://sophiamyang.github.io/finger-frame-effect-lucy/
 ```
