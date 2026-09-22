@@ -15,6 +15,8 @@ https://lijiaman.github.io/
 https://luhengshiwo.github.io/LLMForEverybody/
 https://zjunlp.github.io/project/OmniThink/
 https://iamtaolong.github.io/
+https://dayihengliu.github.io/
+
 
 https://www.nkn-it.de/
 https://darioamodei.com/
