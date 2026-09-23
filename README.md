@@ -27,6 +27,10 @@ https://ysqander.site/links/
 https://manateelazycat.github.io/
 https://manateelazycat.github.io/tags.html
 
+参考：
+https://kejun.github.io/
+https://kejun.github.io/jev-engineering-handbook/index.html
+
 【Sphinx】
 https://mydumper.github.io/mydumper/docs/html/index.html
 https://microsoft.github.io/promptflow/
