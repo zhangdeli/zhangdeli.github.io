@@ -16,6 +16,7 @@ https://luhengshiwo.github.io/LLMForEverybody/
 https://zjunlp.github.io/project/OmniThink/
 https://iamtaolong.github.io/
 https://dayihengliu.github.io/
+https://kejun.github.io/demos/chatgpt-intelligent-ui/
 
 
 https://www.nkn-it.de/
