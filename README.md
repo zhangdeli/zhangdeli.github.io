@@ -32,6 +32,9 @@ https://manateelazycat.github.io/tags.html
 https://kejun.github.io/
 https://kejun.github.io/jev-engineering-handbook/index.html
 
+技术文档参考：
+https://gemma.ai/get-started/
+
 【Sphinx】
 https://mydumper.github.io/mydumper/docs/html/index.html
 https://microsoft.github.io/promptflow/
