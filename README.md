@@ -34,6 +34,7 @@ https://kejun.github.io/jev-engineering-handbook/index.html
 
 技术文档参考：
 https://gemma.ai/get-started/
+https://harness2.github.io/
 
 【Sphinx】
 https://mydumper.github.io/mydumper/docs/html/index.html
