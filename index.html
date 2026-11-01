@@ -1,335 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deli Zhang</title>
+  <meta name="description" content="Deli Zhang（张得力）- 云架构师，专注 AWS / Google Cloud / Azure 多云架构与 AI 应用落地。">
+  <meta property="og:title" content="Deli Zhang">
+  <meta property="og:description" content="云架构师 · 多云架构 / GCP / AI 应用落地">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    :root {
+      --text-black: #111827;
+      --text-gray: #374151;
+      --text-gray-light: #4b5563;
+      --text-gray-desc: #6b7280;
+      --border: #e5e5e7;
+      --border-avatar: #d1d5db;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text-black);
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    main { max-width: 672px; margin: 0 auto; padding: 2rem 2rem 3rem; }
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
-    
-    
-      
-        <title>Zhangdeli's site</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.816931ca.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.9204c3b2.min.css">
-        
-      
-    
-    
-    
-      
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?".":"."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
-    
-      
+    /* ===== Header ===== */
+    header { padding-top: 2.5rem; }
+    .profile-row { display: flex; align-items: center; gap: .75rem; margin-bottom: .5rem; }
+    .avatar {
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 50%; object-fit: cover;
+      border: 1px solid var(--border-avatar);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.25rem; font-weight: 900;
+      letter-spacing: -0.02em; color: var(--text-black);
+    }
+    .bio { margin-top: 1rem; }
+    .bio p {
+      margin: 0 0 .75rem;
+      color: var(--text-gray);
+      line-height: 1.75;
+      font-size: .9375rem;
+    }
+    .bio a, footer a {
+      color: var(--text-black);
+      text-decoration: underline;
+      text-decoration-color: var(--border-avatar);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color .15s ease, text-decoration-color .15s ease;
+    }
+    .bio a:hover, footer a:hover {
+      color: #000;
+      text-decoration-color: var(--text-gray-light);
+    }
 
+    /* ===== Sections（列表样式复刻参考站）===== */
+    section { padding: 3.5rem 0 1.5rem; }
+    .section-title {
+      margin: 0;
+      color: var(--text-gray);
+      font-size: .875rem; font-weight: 500;
+      letter-spacing: -0.005em;
+      padding-bottom: .875rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .rowlist { list-style: none; margin: 0; padding: 0; }
+    .rowlist li { position: relative; }
+    .rowlist li .row {
+      display: block;
+      padding: .735rem 0 .735rem 3.5rem;
+      text-decoration: none;
+    }
+    .rowlist li:not(:last-child) .row::after {
+      content: "";
+      position: absolute; bottom: 0; left: 3.5rem; right: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .row .year {
+      position: absolute; left: 0; top: .8rem;
+      color: var(--text-gray-light);
+      font-size: .875rem; font-weight: 400;
+      white-space: nowrap;
+    }
+    .row h3 {
+      margin: 0;
+      display: inline-flex; align-items: center; gap: .625rem;
+      color: var(--text-gray);
+      font-size: .875rem; font-weight: 500;
+      letter-spacing: -0.005em;
+      line-height: 1.4;
+      transition: opacity .14s ease;
+    }
+    .row .desc {
+      margin: .25rem 0 0;
+      color: var(--text-gray-desc);
+      font-size: .8125rem;
+      line-height: 1.65;
+      transition: opacity .14s ease;
+    }
+    .rowlist:hover .row h3, .rowlist:hover .row .desc { opacity: .3; }
+    .rowlist li:hover .row h3, .rowlist li:hover .row .desc { opacity: 1; }
 
-    
-    
-  </head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-  
-    
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#welcome-to-mkdocs" class="md-skip">
-          Skip to content
-        </a>
-      
+    /* ===== Footer ===== */
+    footer { margin-top: 4.5rem; }
+    footer .divider { margin: 1.5rem 0; border-bottom: 1px solid var(--border); }
+    footer .links { font-size: .875rem; margin: 0 0 .75rem; color: var(--text-gray); }
+    footer .meta { font-size: .75rem; color: var(--text-gray-light); }
+    footer .meta p { margin: .25rem 0; }
+
+    @media (max-width: 480px) {
+      main { padding: 1.25rem 1.25rem 2.5rem; }
+      .rowlist li .row { padding-left: 0; padding-top: .9rem; padding-bottom: .9rem; }
+      .row .year { position: static; display: block; margin-bottom: .15rem; }
+      .rowlist li:not(:last-child) .row::after { left: 0; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="profile-row">
+      <img class="avatar" src="assets/profile.jpg" width="40" height="40" alt="Deli Zhang" fetchpriority="high">
+      <h1>Deli Zhang</h1>
     </div>
-    <div data-md-component="announce">
-      
+    <div class="bio">
+      <p>你好，我是张得力（Deli Zhang），一名来自上海的云架构师，10 年+ 互联网基础设施与团队管理经验。</p>
+      <p>目前就职于全球云服务代理商，主要服务大型企业客户，具备 AWS、Google Cloud、Azure 等多云架构与解决方案能力。主要负责企业云架构设计、技术咨询、售前方案及项目落地，并参与复杂技术问题和生产故障的排查与解决。</p>
+      <p>具备丰富的 GCP Infra 项目实施与交付经验，熟悉 Google AI 生态、Agent Platform 及 LLM 应用，持续探索 AI Agent 在企业技术支持、运维及解决方案场景中的落地。</p>
     </div>
-    
-    
-      
+  </header>
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Zhangdeli&#39;s site" class="md-header__button md-logo" aria-label="Zhangdeli's site" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Zhangdeli's site
-          </span>
+  <section>
+    <h2 class="section-title">工作经历</h2>
+    <ul class="rowlist">
+      <li>
+        <div class="row">
+          <span class="year">至今</span>
+          <h3>全球云服务代理商 · 云架构师</h3>
+          <p class="desc">服务大型企业客户：多云架构设计、技术咨询与售前方案、项目交付落地，以及复杂技术问题与生产故障排查。</p>
         </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Welcome to MkDocs
-            
-          </span>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2022</span>
+          <h3>上海天弥数码科技（IGG 集团）· 云架构师</h3>
+          <p class="desc">从 0-1 设计 AWS / GCP / Azure 多云架构与跨云网络，云资源治理降本增效，平均每年节约 100 万美金；负责大数据平台（Doris / Hadoop / BigQuery）、容器云 PaaS（EKS / GKE）与安全体系建设，主导 AI 应用落地。</p>
         </div>
-      </div>
-    </div>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list"></ol>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2020</span>
+          <h3>上海大微互联网科技 · 运维经理</h3>
+          <p class="desc">规划运维体系与自动化平台建设（GitLab / Jenkins / Jira CI/CD），监控平台与信息安全加固，阿里云与 IDC 混合架构落地，团队梯队建设。</p>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="." title="Zhangdeli&#39;s site" class="md-nav__button md-logo" aria-label="Zhangdeli's site" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
-
-    </a>
-    Zhangdeli's site
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Welcome to MkDocs
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
-        Welcome to MkDocs
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#devops" class="md-nav__link">
-    DevOps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sre" class="md-nav__link">
-    SRE
-  </a>
-  
-</li>
-      
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2017</span>
+          <h3>平安银行金融服务（上海）· 资深运维工程师</h3>
+          <p class="desc">制定操作系统与中间件安全基线规范，搭建 Pafa5 管控平台与自动化运维体系，负责 9 家代理行信用卡平台系统，通过等保三级认证，达到银行 SLA 服务级别标准。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2014</span>
+          <h3>我厨（上海）科技 · 运维负责人</h3>
+          <p class="desc">主导业务从 IDC 全量迁移阿里云，负责阿里云架构与私有云（ZStack + KVM）建设，监控日志体系与 Docker 微服务改造。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2013</span>
+          <h3>惠生通讯（Wison 集团）· 运维工程师</h3>
+          <p class="desc">IDC 机房建设规划，Linux 服务器运维与自动化脚本编写，电信系统应急故障远程处理与协议分析。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2008</span>
+          <h3>中兴通讯（ZTE）· 系统工程师</h3>
+          <p class="desc">中兴服务器及通讯设备调试开通，Linux 系统运维与数据迁移割接，售前技术分析支持。</p>
+        </div>
+      </li>
     </ul>
-  
-</nav>
-      
-    </li>
-  
+  </section>
 
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#devops" class="md-nav__link">
-    DevOps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sre" class="md-nav__link">
-    SRE
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
-                
-
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://zhangdeli.github.io">mysite</a>.</p>
-<h2 id="devops">DevOps</h2>
-<ul>
-<li><code>什么是DevOps</code> - DevOps是一套实践方法，在保证高质量的前提下缩短系统变更从提交到部署至生产环境的时间。</li>
-</ul>
-<h2 id="sre">SRE</h2>
-<pre><code>https://sre.google
-</code></pre>
-
-              
-            </article>
-          </div>
+  <section>
+    <h2 class="section-title">项目经验</h2>
+    <ul class="rowlist">
+      <li>
+        <div class="row">
+          <span class="year">2023</span>
+          <h3>IGG AI 智能问答系统</h3>
+          <p class="desc">以游戏为主题的 AI 知识库项目：对 GPT-4、PaLM2、Claude2、Llama2 全面评估后选型 Azure OpenAI GPT-4 作为底座，完成模型部署、配置管理与上线发布。</p>
         </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2023</span>
+          <h3>AIGC 训练平台建设</h3>
+          <p class="desc">基于 AWS All-In-One AI 方案为美术团队搭建智能训练平台：SD WebUI 对接 SageMaker，训练模型存储于 S3，编写文档并组织培训。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2023</span>
+          <h3>GKE 部署 Stable Diffusion 出图平台</h3>
+          <p class="desc">使用 GKE、Agones 与 Filestore 在 GCP 云端构建 Stable Diffusion 出图平台，利用云端 GPU 算力实现快速高效生图。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2022</span>
+          <h3>EMR on EKS Fargate 大数据 Serverless 架构</h3>
+          <p class="desc">基于 Serverless 无服务器技术运行大数据任务，任务完成后云资源自动释放，架构方案已交付生产使用。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2022</span>
+          <h3>IGG 云端安全优化</h3>
+          <p class="desc">防火墙申请流程规范化，Linux / 中间件 / 数据库安全基线落地，Web 应用防火墙（WAF）防护，云账号开启 MFA。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2018</span>
+          <h3>平安银行 Linux 与中间件基线规范化</h3>
+          <p class="desc">9 家代理行操作系统基线标准化与中间件基线规范化，完成 RocketMQ、Redis、Nginx、Weblogic 等中间件集群部署，通过等保三级认证。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2016</span>
+          <h3>我厨 IDC 业务全量迁移阿里云</h3>
+          <p class="desc">设计阿里云电商架构并制定迁移方案，搭建预演环境完成迁移测试，保障数据库与业务代码平滑迁移、业务连续稳定。</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">技术能力</h2>
+    <ul class="rowlist">
+      <li>
+        <div class="row">
+          <span class="year">云</span>
+          <h3>多云架构与 FinOps</h3>
+          <p class="desc">AWS / Google Cloud / Azure / 阿里云解决方案与实施集成，跨云网络架构设计，云资源治理与成本优化。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">容器</span>
+          <h3>云原生与容器云</h3>
+          <p class="desc">Kubernetes（EKS / GKE / 自建）、Rancher、Calico、Docker、Serverless（Fargate）。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">数据</span>
+          <h3>大数据与数据库</h3>
+          <p class="desc">Doris、Hadoop、BigQuery、EMR、Airflow；MySQL、Redis、MongoDB、云 RDS。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">运维</span>
+          <h3>DevOps / SRE</h3>
+          <p class="desc">GitLab + Jenkins CI/CD、GitOps、Prometheus + Grafana、ELK / EFK、Zabbix，运维体系与监控告警建设。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">AI</span>
+          <h3>AI 应用与 LLM</h3>
+          <p class="desc">Azure OpenAI、GCP Vertex AI、Stable Diffusion 部署与训练，LLM 应用、AI Agent 与 Prompt Engineering 落地实践。</p>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">开发</span>
+          <h3>语言与脚本</h3>
+          <p class="desc">Shell（精通）、Python，熟悉 DevOps 工具链二次开发与自动化平台搭建。</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">教育经历</h2>
+    <ul class="rowlist">
+      <li>
+        <div class="row">
+          <span class="year">2010</span>
+          <h3>上海交通大学 · 计算机科学与技术（本科）</h3>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="year">2006</span>
+          <h3>上海交通大学 · 计算机及应用（专科）</h3>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="divider"></div>
+    <p class="links">
+      <a href="https://github.com/zhangdeli" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </p>
+    <div class="meta">
+      <p>Copyright &copy; 2026 Deli Zhang</p>
     </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.01824240.min.js"}</script>
-    
-    
-      <script src="assets/javascripts/bundle.ff0eccb3.min.js"></script>
-      
-    
-  </body>
+  </footer>
+</main>
+</body>
 </html>
