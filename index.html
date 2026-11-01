@@ -116,6 +116,41 @@
     .rowlist:hover .row h3, .rowlist:hover .row .desc { opacity: .3; }
     .rowlist li:hover .row h3, .rowlist li:hover .row .desc { opacity: 1; }
 
+    /* ===== Certifications ===== */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      padding-top: 1.5rem;
+    }
+    .cert { text-align: center; }
+    .cert .badge-box {
+      height: 88px;
+      display: flex; align-items: flex-end; justify-content: center;
+    }
+    .cert img {
+      width: 88px; height: 88px;
+      object-fit: contain;
+      transition: transform .18s ease;
+    }
+    .cert img.smaller { width: 72px; height: 72px; }
+    .cert:hover img { transform: translateY(-3px) scale(1.04); }
+    .cert .cert-name {
+      margin-top: .6rem;
+      color: var(--text-gray);
+      font-size: .8125rem; font-weight: 500;
+      line-height: 1.45;
+    }
+    .cert .cert-issuer {
+      margin-top: .15rem;
+      color: var(--text-gray-desc);
+      font-size: .75rem;
+    }
+    @media (max-width: 560px) {
+      .cert-grid { gap: .75rem; }
+      .cert img { width: 72px; height: 72px; }
+    }
+
     /* ===== Footer ===== */
     footer { margin-top: 4.5rem; }
     footer .divider { margin: 1.5rem 0; border-bottom: 1px solid var(--border); }
@@ -337,6 +372,33 @@
         </div>
       </li>
     </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">专业认证</h2>
+    <div class="cert-grid">
+      <div class="cert">
+        <div class="badge-box">
+          <img class="smaller" src="assets/certs/gcp-pca.png" width="72" height="72" alt="Google Cloud Certified - Professional Cloud Architect" loading="lazy">
+        </div>
+        <p class="cert-name">Professional Cloud Architect</p>
+        <p class="cert-issuer">Google Cloud Certified</p>
+      </div>
+      <div class="cert">
+        <div class="badge-box">
+          <img class="smaller" src="assets/certs/gcp-genai-leader.png" width="72" height="72" alt="Google Cloud Certified - Generative AI Leader" loading="lazy">
+        </div>
+        <p class="cert-name">Generative AI Leader</p>
+        <p class="cert-issuer">Google Cloud Certified</p>
+      </div>
+      <div class="cert">
+        <div class="badge-box">
+          <img src="assets/certs/aws-saa.png" width="88" height="88" alt="AWS Certified Solutions Architect - Associate" loading="lazy">
+        </div>
+        <p class="cert-name">Solutions Architect - Associate</p>
+        <p class="cert-issuer">AWS Certified</p>
+      </div>
+    </div>
   </section>
 
   <footer>
