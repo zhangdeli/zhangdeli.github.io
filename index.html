@@ -145,6 +145,36 @@
     .rowlist li:hover .row h3, .rowlist li:hover .row .desc,
     .rowlist li:hover .row .desc-list li { opacity: 1; }
 
+    /* ===== 技术能力（紧凑单行：沿用两列网格，类别与关键词同行） ===== */
+    .skill-list { list-style: none; margin: 0; padding: 0; }
+    .skill-list li {
+      position: relative;
+      display: grid;
+      grid-template-columns: var(--col-year) minmax(0, 1fr);
+      align-items: baseline;
+      column-gap: .75rem;
+      padding: .6rem 0;
+    }
+    .skill-list li:not(:last-child)::after {
+      content: "";
+      position: absolute; bottom: 0; left: var(--col-year); right: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .skill-cat {
+      color: var(--text-gray-light);
+      font-size: .8125rem;
+      white-space: nowrap;
+    }
+    .skill-body {
+      font-size: .8125rem; line-height: 1.65;
+      transition: opacity .14s ease;
+    }
+    .skill-keys { color: var(--text-gray-desc); display: flex; flex-wrap: wrap; }
+    .skill-keys .kw { white-space: nowrap; }
+    .skill-keys .kw:not(:last-child)::after { content: "·"; margin: 0 .22rem; color: var(--text-gray-light); }
+    .skill-list:hover .skill-body { opacity: .3; }
+    .skill-list li:hover .skill-body { opacity: 1; }
+
     /* ===== 折叠早期经历（开关作为列表中的一行，字体沿用原有样式） ===== */
     .fold-row { padding: .85rem 0 1rem; }
     .fold-toggle {
@@ -219,6 +249,9 @@
       .row .desc { grid-column: 1; }
       .row .desc-list { grid-column: 1; }
       .rowlist li:not(:last-child) .row::after { left: 0; }
+      .skill-list li { grid-template-columns: minmax(0, 1fr); padding: .65rem 0; }
+      .skill-cat { margin-bottom: .15rem; }
+      .skill-list li:not(:last-child)::after { left: 0; }
     }
   </style>
 </head>
@@ -382,48 +415,26 @@
 
   <section>
     <h2 class="section-title">技术能力</h2>
-    <ul class="rowlist">
+    <ul class="skill-list">
       <li>
-        <div class="row">
-          <span class="year">云</span>
-          <h3>多云架构与 FinOps</h3>
-          <p class="desc">AWS / Google Cloud / Azure / 阿里云解决方案与实施集成，跨云网络架构设计，云资源治理与成本优化。</p>
-        </div>
+        <span class="skill-cat">云</span>
+        <div class="skill-body"><span class="skill-keys"><span class="kw">企业级架构设计</span><span class="kw">Landing Zone</span><span class="kw">迁移与治理</span></span></div>
       </li>
       <li>
-        <div class="row">
-          <span class="year">容器</span>
-          <h3>云原生与容器云</h3>
-          <p class="desc">Kubernetes（EKS / GKE / 自建）、Rancher、Calico、Docker、Serverless（Fargate）。</p>
-        </div>
+        <span class="skill-cat">容器</span>
+        <div class="skill-body"><span class="skill-keys"><span class="kw">GKE / EKS / AKS</span><span class="kw">GPU 调度</span><span class="kw">AI Workload</span></span></div>
       </li>
       <li>
-        <div class="row">
-          <span class="year">数据</span>
-          <h3>大数据与数据库</h3>
-          <p class="desc">Doris、Hadoop、BigQuery、EMR、Airflow；MySQL、Redis、MongoDB、云 RDS。</p>
-        </div>
+        <span class="skill-cat">数据</span>
+        <div class="skill-body"><span class="skill-keys"><span class="kw">BigQuery</span><span class="kw">Doris</span><span class="kw">数据平台</span></span></div>
       </li>
       <li>
-        <div class="row">
-          <span class="year">运维</span>
-          <h3>DevOps / SRE</h3>
-          <p class="desc">GitLab + Jenkins CI/CD、GitOps、Prometheus + Grafana、ELK / EFK、Zabbix，运维体系与监控告警建设。</p>
-        </div>
+        <span class="skill-cat">运维</span>
+        <div class="skill-body"><span class="skill-keys"><span class="kw">可观测性</span><span class="kw">稳定性建设</span><span class="kw">FinOps</span></span></div>
       </li>
       <li>
-        <div class="row">
-          <span class="year">AI</span>
-          <h3>AI 应用与 LLM</h3>
-          <p class="desc">Azure OpenAI、GCP Vertex AI、Stable Diffusion 部署与训练，LLM 应用、AI Agent 与 Prompt Engineering 落地实践。</p>
-        </div>
-      </li>
-      <li>
-        <div class="row">
-          <span class="year">开发</span>
-          <h3>语言与脚本</h3>
-          <p class="desc">Shell（精通）、Python，熟悉 DevOps 工具链二次开发与自动化平台搭建。</p>
-        </div>
+        <span class="skill-cat">AI</span>
+        <div class="skill-body"><span class="skill-keys"><span class="kw">Vertex AI</span><span class="kw">Gemini</span><span class="kw">RAG</span><span class="kw">AI Agent</span><span class="kw">LLM 应用架构</span><span class="kw">Prompt Engineering</span></span></div>
       </li>
     </ul>
   </section>
