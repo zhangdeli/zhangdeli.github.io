@@ -113,8 +113,37 @@
       line-height: 1.65;
       transition: opacity .14s ease;
     }
-    .rowlist:hover .row h3, .rowlist:hover .row .desc { opacity: .3; }
-    .rowlist li:hover .row h3, .rowlist li:hover .row .desc { opacity: 1; }
+    .row .desc-list {
+      grid-column: 2;
+      list-style: none;
+      margin: .55rem 0 0;
+      padding: 0;
+    }
+    .row .desc-list li {
+      position: relative;
+      padding-left: .95rem;
+      color: var(--text-gray-desc);
+      font-size: .8125rem;
+      line-height: 1.65;
+      transition: opacity .14s ease;
+    }
+    .row .desc-list li + li { margin-top: .3rem; }
+    .row .desc-list li::before {
+      content: "";
+      position: absolute;
+      left: .15rem; top: .58rem;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: #a1a1aa;
+    }
+    .row .desc-list .lead {
+      color: var(--text-gray);
+      font-weight: 500;
+    }
+    .rowlist:hover .row h3, .rowlist:hover .row .desc,
+    .rowlist:hover .row .desc-list li { opacity: .3; }
+    .rowlist li:hover .row h3, .rowlist li:hover .row .desc,
+    .rowlist li:hover .row .desc-list li { opacity: 1; }
 
     /* ===== 折叠早期经历（开关作为列表中的一行，字体沿用原有样式） ===== */
     .fold-row { padding: .85rem 0 1rem; }
@@ -135,7 +164,8 @@
     .fold-item[hidden] { display: none; }
     /* 悬停开关时不让上方经历变灰 */
     .rowlist:has(.fold-toggle:hover) .row h3,
-    .rowlist:has(.fold-toggle:hover) .row .desc { opacity: 1; }
+    .rowlist:has(.fold-toggle:hover) .row .desc,
+    .rowlist:has(.fold-toggle:hover) .row .desc-list li { opacity: 1; }
 
     /* ===== Certifications ===== */
     .cert-grid {
@@ -187,6 +217,7 @@
       }
       .row .year { margin-bottom: .2rem; }
       .row .desc { grid-column: 1; }
+      .row .desc-list { grid-column: 1; }
       .rowlist li:not(:last-child) .row::after { left: 0; }
     }
   </style>
@@ -212,14 +243,28 @@
         <div class="row">
           <span class="year">2024-至今</span>
           <h3>全球云服务代理商 · 解决方案架构师</h3>
-          <p class="desc">服务大型企业客户：多云架构设计、技术咨询与售前方案、项目交付落地，以及复杂技术问题及生产故障排查解决。</p>
+          <p class="desc">负责大型企业客户的公有云与 AI 技术咨询、解决方案设计及项目交付，覆盖 AWS、Google Cloud、Microsoft Azure 等多云平台。</p>
+          <ul class="desc-list">
+            <li><span class="lead">多云架构设计：</span>基于企业业务需求，规划云基础设施、网络、计算、存储、容器及安全架构。</li>
+            <li><span class="lead">企业云解决方案：</span>参与企业级 Landing Zone、云迁移、基础设施治理及云资源优化项目。</li>
+            <li><span class="lead">AI 技术落地：</span>围绕 Google Cloud AI 生态，探索 Vertex AI、Gemini、LLM 及企业级 AI 应用场景。</li>
+            <li><span class="lead">技术咨询与售前：</span>参与客户需求分析、技术交流、架构设计及解决方案制定。</li>
+            <li><span class="lead">项目交付与技术支持：</span>负责复杂云环境问题分析、疑难故障排查及关键项目技术实施。</li>
+          </ul>
         </div>
       </li>
       <li>
         <div class="row">
           <span class="year">2022-2024 (2年)</span>
           <h3>上海天弥数码科技（IGG 集团）· 云架构师</h3>
-          <p class="desc">从 0-1 设计 AWS / GCP / Azure 多云架构与跨云网络，云资源治理降本增效，平均每年节约 100 万美金；负责大数据平台（Doris / Hadoop / BigQuery）、容器云 PaaS（EKS / GKE）与安全体系建设，主导 AI 应用落地。</p>
+          <p class="desc">负责集团多云基础设施架构设计与建设，推动云资源治理、成本优化及 AI 应用落地。</p>
+          <ul class="desc-list">
+            <li>从 0 到 1 规划 AWS / GCP / Azure 多云架构及跨云网络体系，支撑全球业务基础设施建设。</li>
+            <li>建立云资源治理与成本优化机制，平均每年节约约 100 万美元云资源成本。</li>
+            <li>规划与建设容器云平台（EKS / GKE）、大数据平台（Doris / Hadoop / BigQuery）。</li>
+            <li>推动云平台安全体系、基础设施标准化及资源管理体系建设。</li>
+            <li>参与企业 AI 应用与 AIGC 平台建设，推动生成式 AI 技术在游戏研发场景中的应用。</li>
+          </ul>
         </div>
       </li>
       <li class="fold-row">
