@@ -116,6 +116,27 @@
     .rowlist:hover .row h3, .rowlist:hover .row .desc { opacity: .3; }
     .rowlist li:hover .row h3, .rowlist li:hover .row .desc { opacity: 1; }
 
+    /* ===== 折叠早期经历（开关作为列表中的一行，字体沿用原有样式） ===== */
+    .fold-row { padding: .85rem 0 1rem; }
+    .fold-toggle {
+      display: inline-flex; align-items: baseline; gap: .5rem;
+      margin: 0; padding: 0; border: 0; background: none;
+      color: var(--text-gray-desc); cursor: pointer;
+      font-family: inherit;
+      font-size: .875rem; font-weight: 500;
+      letter-spacing: -0.005em;
+      transition: color .15s ease;
+    }
+    .fold-toggle:hover { color: var(--text-gray-light); }
+    .fold-toggle:focus-visible {
+      outline: 2px solid var(--text-gray-desc); outline-offset: 4px; border-radius: 2px;
+    }
+    .fold-toggle .caret { font-size: .75rem; line-height: 1; }
+    .fold-item[hidden] { display: none; }
+    /* 悬停开关时不让上方经历变灰 */
+    .rowlist:has(.fold-toggle:hover) .row h3,
+    .rowlist:has(.fold-toggle:hover) .row .desc { opacity: 1; }
+
     /* ===== Certifications ===== */
     .cert-grid {
       display: grid;
@@ -201,35 +222,40 @@
           <p class="desc">从 0-1 设计 AWS / GCP / Azure 多云架构与跨云网络，云资源治理降本增效，平均每年节约 100 万美金；负责大数据平台（Doris / Hadoop / BigQuery）、容器云 PaaS（EKS / GKE）与安全体系建设，主导 AI 应用落地。</p>
         </div>
       </li>
-      <li>
+      <li class="fold-row">
+        <button class="fold-toggle" type="button" aria-expanded="false">
+          <span class="caret" aria-hidden="true">▶</span><span>展开 2008–2022 年的经历</span>
+        </button>
+      </li>
+      <li class="fold-item" hidden>
         <div class="row">
           <span class="year">2020-2022 (1年9个月)</span>
           <h3>上海大微互联网科技 · 运维经理</h3>
           <p class="desc">规划运维体系与自动化平台建设（GitLab / Jenkins / Jira CI/CD），监控平台与信息安全加固，阿里云与 IDC 混合架构落地，团队梯队建设。</p>
         </div>
       </li>
-      <li>
+      <li class="fold-item" hidden>
         <div class="row">
           <span class="year">2017-2020 (2年7个月)</span>
           <h3>平安银行金融服务（上海）· 运维架构师</h3>
           <p class="desc">制定操作系统与中间件安全基线规范，搭建 Pafa5 管控平台与自动化运维体系，负责 9 家代理行信用卡平台系统，通过等保三级认证，达到银行 SLA 服务级别标准。</p>
         </div>
       </li>
-      <li>
+      <li class="fold-item" hidden>
         <div class="row">
           <span class="year">2014-2017 (3年1个月)</span>
           <h3>我厨（上海）科技 · 运维负责人</h3>
           <p class="desc">主导业务从 IDC 全量迁移阿里云，负责阿里云架构与私有云（ZStack + KVM）建设，监控日志体系与 Docker 微服务改造。</p>
         </div>
       </li>
-      <li>
+      <li class="fold-item" hidden>
         <div class="row">
           <span class="year">2013-2014 (1年2个月)</span>
           <h3>惠生通讯（Wison 集团）· 高级运维工程师</h3>
           <p class="desc">IDC 机房建设规划，Linux 服务器运维与自动化脚本编写，电信系统应急故障远程处理与协议分析。</p>
         </div>
       </li>
-      <li>
+      <li class="fold-item" hidden>
         <div class="row">
           <span class="year">2008-2013 (4年8个月)</span>
           <h3>中兴通讯（ZTE）· 运维工程师</h3>
@@ -411,5 +437,18 @@
     </div>
   </footer>
 </main>
+<script>
+  (function () {
+    var btn = document.querySelector('.fold-toggle');
+    var items = document.querySelectorAll('.fold-item');
+    var caret = btn.querySelector('.caret');
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      for (var i = 0; i < items.length; i++) items[i].hidden = open;
+      caret.textContent = open ? '▶' : '▼';
+    });
+  })();
+</script>
 </body>
 </html>
