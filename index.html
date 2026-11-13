@@ -69,9 +69,9 @@
     section { padding: 3.5rem 0 1.5rem; }
     .section-title {
       margin: 0;
-      color: var(--text-gray);
-      font-size: .875rem; font-weight: 500;
-      letter-spacing: -0.005em;
+      color: var(--text-black);
+      font-size: .9375rem; font-weight: 700;
+      letter-spacing: -0.01em;
       padding-bottom: .875rem;
       border-bottom: 1px solid var(--border);
     }
@@ -99,8 +99,8 @@
     }
     .row h3 {
       margin: 0;
-      color: var(--text-gray);
-      font-size: .875rem; font-weight: 500;
+      color: var(--text-black);
+      font-size: .875rem; font-weight: 600;
       letter-spacing: -0.005em;
       line-height: 1.4;
       transition: opacity .14s ease;
@@ -138,8 +138,10 @@
     }
     .row .desc-list .lead {
       color: var(--text-gray);
-      font-weight: 500;
+      font-weight: 600;
     }
+    .bio strong { color: var(--text-black); font-weight: 600; }
+    .row strong { color: var(--text-gray); font-weight: 600; }
     .rowlist:hover .row h3, .rowlist:hover .row .desc,
     .rowlist:hover .row .desc-list li { opacity: .3; }
     .rowlist li:hover .row h3, .rowlist li:hover .row .desc,
@@ -161,7 +163,8 @@
       border-bottom: 1px solid var(--border);
     }
     .skill-cat {
-      color: var(--text-gray-light);
+      color: var(--text-gray);
+      font-weight: 500;
       font-size: .8125rem;
       white-space: nowrap;
     }
@@ -263,9 +266,9 @@
       <h1>Deli Zhang</h1>
     </div>
     <div class="bio">
-      <p>专注于云计算与 AI 解决方案的架构师，拥有 15+ 年互联网基础设施与云计算领域经验。</p>
-      <p>长期深耕 AWS、Google Cloud、Microsoft Azure 等主流公有云平台，具备企业级多云架构设计、云基础设施规划、容器平台建设、技术咨询及项目交付经验。</p>
-      <p>近年来持续关注企业级 AI 技术落地，深入探索 Google Cloud AI 生态、Vertex AI、Gemini、LLM 应用及 AI Agent，具备从云基础设施到 AI 应用架构的综合技术视野。</p>
+      <p>专注于<strong>云计算与 AI 解决方案</strong>的架构师，拥有 <strong>15+ 年</strong>互联网基础设施与云计算领域经验。</p>
+      <p>长期深耕 <strong>AWS、Google Cloud、Microsoft Azure</strong> 等主流公有云平台，具备企业级多云架构设计、云基础设施规划、容器平台建设、技术咨询及项目交付经验。</p>
+      <p>近年来持续关注企业级 AI 技术落地，深入探索 Google Cloud AI 生态、Vertex AI、Gemini、LLM 应用及 AI Agent，具备<strong>从云基础设施到 AI 应用架构</strong>的综合技术视野。</p>
       <p>擅长从业务场景和实际技术问题出发，完成技术分析、架构设计、解决方案制定与落地交付，帮助企业构建稳定、高效、可扩展的云与 AI 基础设施。</p>
     </div>
   </header>
@@ -293,8 +296,8 @@
           <h3>上海天弥数码科技（IGG 集团）· 云架构师</h3>
           <p class="desc">负责集团多云基础设施架构设计与建设，推动云资源治理、成本优化及 AI 应用落地。</p>
           <ul class="desc-list">
-            <li>从 0 到 1 规划 AWS / GCP / Azure 多云架构及跨云网络体系，支撑全球业务基础设施建设。</li>
-            <li>建立云资源治理与成本优化机制，平均每年节约约 100 万美元云资源成本。</li>
+            <li><strong>从 0 到 1</strong> 规划 AWS / GCP / Azure 多云架构及跨云网络体系，支撑全球业务基础设施建设。</li>
+            <li>建立云资源治理与成本优化机制，平均每年节约<strong>约 100 万美元</strong>云资源成本。</li>
             <li>规划与建设容器云平台（EKS / GKE）、大数据平台（Doris / Hadoop / BigQuery）。</li>
             <li>推动云平台安全体系、基础设施标准化及资源管理体系建设。</li>
             <li>参与企业 AI 应用与 AIGC 平台建设，推动生成式 AI 技术在游戏研发场景中的应用。</li>
@@ -317,7 +320,7 @@
         <div class="row">
           <span class="year">2017-2020 (2年7个月)</span>
           <h3>平安银行金融服务（上海）· 运维架构师</h3>
-          <p class="desc">制定操作系统与中间件安全基线规范，搭建 Pafa5 管控平台与自动化运维体系，负责 9 家代理行信用卡平台系统，通过等保三级认证，达到银行 SLA 服务级别标准。</p>
+          <p class="desc">制定操作系统与中间件安全基线规范，搭建 Pafa5 管控平台与自动化运维体系，负责 9 家代理行信用卡平台系统，通过<strong>等保三级</strong>认证，达到银行 SLA 服务级别标准。</p>
         </div>
       </li>
       <li class="fold-item" hidden>
@@ -386,14 +389,14 @@
         <div class="row">
           <span class="year">2021年3月</span>
           <h3>大微 ATES 自动化运维平台建设</h3>
-          <p class="desc">整合 GitLab、Jumpserver、Zabbix、Jenkins、Jira、Nacos 与 YApi 搭建一体化运维平台，效率提升约 80%；搭建 Fluentd + Elasticsearch + Kibana 日志平台，系统安全加固开启 2FA。</p>
+          <p class="desc">整合 GitLab、Jumpserver、Zabbix、Jenkins、Jira、Nacos 与 YApi 搭建一体化运维平台，<strong>效率提升约 80%</strong>；搭建 Fluentd + Elasticsearch + Kibana 日志平台，系统安全加固开启 2FA。</p>
         </div>
       </li>
       <li>
         <div class="row">
           <span class="year">2018年6月</span>
           <h3>平安银行 Linux 与中间件基线规范化</h3>
-          <p class="desc">9 家代理行操作系统基线标准化与中间件基线规范化，完成 RocketMQ、Redis、Nginx、Weblogic 等中间件集群部署，通过等保三级认证。</p>
+          <p class="desc">9 家代理行操作系统基线标准化与中间件基线规范化，完成 RocketMQ、Redis、Nginx、Weblogic 等中间件集群部署，通过<strong>等保三级</strong>认证。</p>
         </div>
       </li>
       <li>
